@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body {
+  width: 100%;
+  min-height: 100dvh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  position: relative;
+  background-color: #F5E6D3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.story-script-regular {
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
   display: flex;
+  background-color: #4B2E2B;
+  padding: 1rem 2rem;
+  font-family: "Story Script", sans-serif;
+  font-size: 1.5rem;
+  color: rgb(248, 241, 241);
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.songs {
+  display: flex;
+  font-family: "Story Script", sans-serif;
+  font-size: 2rem;
+  color: rgb(248, 241, 241);
+  padding: 0.5rem;
+}
+
+.generalContainer {
+  display: flex;
+  background-color: #4B2E2B;
+  border-radius: 1rem;
   flex-direction: column;
+  padding: 0.5rem;
+  margin: 1rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.songContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  padding: 0.8rem 1.5rem;
+  background-color: rgb(248, 241, 241);
+  border-radius: 1rem;
+  width: 100%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.songContainer .containTwo {
+  grid-column: 1/3;
+  grid-row: 2;
+  font-style: italic;
+  color: #7B4B3A;
+  font-size: 1rem;
 }
+.songContainer .songTitle {
+  grid-column: 1/3;
+  font-family: "Story Script", sans-serif;
+  color: #4B2E2B;
+  padding-bottom: 0.3rem;
+}
+.songContainer .songArtist {
+  font-family: "Courier New", Courier, monospace;
+  margin-right: auto;
+}
+.songContainer .songDuration {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Courier New", Courier, monospace;
+}
+.songContainer span {
+  font-style: normal;
+}/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,100 @@
+/// Reset CSS básico 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 0;    
+  }
+html, body {
+    width: 100%;
+    min-height: 100dvh;
+    
+  }
+body{
+    position: relative;
+    background-color: #F5E6D3;
+    
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}    
+p{
+    text-wrap: pretty;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.story-script-regular {
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+$color-fondo:#4B2E2B;
+$color-titulos: rgb(248, 241, 241);
+$color-subtitulos: #7B4B3A;
+
+.header{
+    display: flex;
+    background-color: $color-fondo;
+    padding: 1rem 2rem;
+    font-family: "Story Script", sans-serif;
+    font-size: 1.5rem;
+    color: $color-titulos;
+}
+.gridContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.songs{
+    display: flex;
+    font-family: "Story Script", sans-serif;
+    font-size: 2rem;
+    color: $color-titulos;
+    padding: .5rem;
+}
+.generalContainer{
+    display: flex  ;
+    background-color: $color-fondo;
+    border-radius: 1rem;
+    flex-direction: column;
+    padding: .5rem;
+    margin: 1rem;
+    align-items: center ;
+
+}
+.songContainer{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    padding: .8rem 1.5rem;
+    background-color: $color-titulos;
+    border-radius: 1rem;
+    width: 100%;
+
+    .containTwo{
+        grid-column: 1/3;
+        grid-row: 2;
+        font-style: italic;
+        color: $color-subtitulos;
+        font-size: 1rem;
+    }
+    .songTitle{
+        grid-column: 1/3;
+        font-family: "Story Script", sans-serif;
+        color: $color-fondo;
+        padding-bottom: .3rem;
+    }
+    .songArtist{
+        font-family: 'Courier New', Courier, monospace;
+        margin-right: auto;
+    }
+    .songDuration{
+        display: flex;
+        justify-content: flex-end;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    span{
+        font-style: normal;
+    }
+}
