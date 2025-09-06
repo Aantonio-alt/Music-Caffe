@@ -71,6 +71,20 @@ $color-subtitulos: #7B4B3A;
     background-color: $color-titulos;
     border-radius: 1rem;
     width: 100%;
+    cursor: pointer;
+    transition: transform .3s ease-in-out,  background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:hover{ 
+        transform: scale(1.01);
+        background-color: $color-subtitulos;
+        
+        .songTitle, .songArtist, .songDuration{
+            color: $color-titulos;
+        }
+    }
+    &:active{
+        transform: scale(.90);
+    }
 
     .containTwo{
         grid-column: 1/3;
@@ -84,15 +98,22 @@ $color-subtitulos: #7B4B3A;
         font-family: "Story Script", sans-serif;
         color: $color-fondo;
         padding-bottom: .3rem;
+        cursor: pointer;
+        user-select: none;
+
     }
     .songArtist{
         font-family: 'Courier New', Courier, monospace;
-        margin-right: auto;
+        margin-right: auto;       
+        user-select: none;
+        
     }
     .songDuration{
         display: flex;
         justify-content: flex-end;
         font-family: 'Courier New', Courier, monospace;
+        user-select: none;
+
     }
     span{
         font-style: normal;
