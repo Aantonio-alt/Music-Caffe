@@ -3,6 +3,7 @@ import './App.css'
 import SearchResults from "./components/SearchResults";
 import { useState, useEffect } from "react";
 import Library from "./components/Library";
+import axios from "axios";
 
 const App = () => {
 
@@ -43,6 +44,17 @@ const removeSongFromPlaylist = (songToRemoveId) => {
     setAddSongs(addSongs.filter(song => song.id !== songToRemoveId));
 }
 
+const peticion = async (searchTerm) => {
+  axios.get(`https://www.theaudiodb.com/api/v1/json/123/search.php?s=${searchTerm}`)
+  .then(response => {
+    console.log(response.data.artists[0].strArtist)
+    // setResults(response.data)
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+}
+  peticion("paradisio")
 
   return(
         <div className="App">
