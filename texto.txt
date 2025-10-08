@@ -1,0 +1,12 @@
+
+const peticion = async (searchTerm) => {
+  axios.get(`https://www.theaudiodb.com/api/v1/json/123/search.php?s=${searchTerm}`)
+  .then(response => {
+    console.log(response.data.artists[0].strArtist)
+    // setResults(response.data)
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+}
+  peticion("paradisio")
