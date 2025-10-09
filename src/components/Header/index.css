@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100dvh;
+}
+
+body {
+  position: relative;
+  background-color: #F5E6D3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.story-script-regular {
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+  display: flex;
+  background-color: #4B2E2B;
+  padding: 1rem 2rem;
+  font-family: "Story Script", sans-serif;
+  font-size: 1.5rem;
+  color: rgb(248, 241, 241);
+}/*# sourceMappingURL=index.css.map */

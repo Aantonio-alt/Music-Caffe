@@ -1,0 +1,10 @@
+@import "../../base";
+
+.header{
+    display: flex;
+    background-color: $color-fondo;
+    padding: 1rem 2rem;
+    font-family: "Story Script", sans-serif;
+    font-size: 1.5rem;
+    color: $color-titulos;
+}
