@@ -7,30 +7,40 @@
     font-family: "Story Script", sans-serif;
     font-size: 1.5rem;
     color: $color-titulos;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
+
 }
 
 .formulario{
     display: flex;
-    padding: 1rem;
-    margin: .5rem 1rem;
+    padding: .3rem;
+    margin: .5rem 1rem .5rem 2rem;
     border-radius: 1rem;
     border-color: white;
     background-color: $color-titulos;
 
     .buscador{
-        padding: .5rem 1rem;
+        padding: .5rem 2rem .5rem 1rem;
+        border-radius: 1rem;
+        margin: .3rem;
+        
     }
     .butonSearch{
-        padding: .3rem;
+        padding: .5rem;
         font-size: 1.1rem;
+        border: transparent;
+        margin: .3rem .3rem .3rem 0;
+        cursor: pointer;
+        background-color: transparent;
     }
 }
 
 .menuOptions{
-    gap: 1rem;
+    margin-left: auto;
+
     .enlace{
+        padding: .3rem;
         text-decoration: none;
         color: $color-titulos;
     }

@@ -40,30 +40,37 @@ p {
   font-family: "Story Script", sans-serif;
   font-size: 1.5rem;
   color: rgb(248, 241, 241);
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
 }
 
 .formulario {
   display: flex;
-  padding: 1rem;
-  margin: 0.5rem 1rem;
+  padding: 0.3rem;
+  margin: 0.5rem 1rem 0.5rem 2rem;
   border-radius: 1rem;
   border-color: white;
   background-color: rgb(248, 241, 241);
 }
 .formulario .buscador {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  border-radius: 1rem;
+  margin: 0.3rem;
 }
 .formulario .butonSearch {
-  padding: 0.3rem;
+  padding: 0.5rem;
   font-size: 1.1rem;
+  border: transparent;
+  margin: 0.3rem 0.3rem 0.3rem 0;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .menuOptions {
-  gap: 1rem;
+  margin-left: auto;
 }
 .menuOptions .enlace {
+  padding: 0.3rem;
   text-decoration: none;
   color: rgb(248, 241, 241);
 }/*# sourceMappingURL=index.css.map */

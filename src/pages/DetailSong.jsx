@@ -1,11 +1,15 @@
+import SearchBar from "../components/SearchBar/SearchBar";
+import "./datail.css"
+
 
 
 const DetailSong = () => {
-    return (
-        <>
-        
-        </>
-    )
-}
+  
+  return (
+    <>
+    
+    </>
+  );
+};
 
-export default DetailSong
+export default DetailSong;
