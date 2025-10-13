@@ -1,5 +1,8 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import "./index.css"
+import loadingGift from "../../assets/cargando.gif"
+import { Link, useNavigate } from "react-router-dom"
 
 
 const SearchBar = ({artistName , albumClick}) => {
@@ -28,22 +31,24 @@ const SearchBar = ({artistName , albumClick}) => {
                 } finally {
                     setTimeout(() => {
                         setIsLoading(false)
-                    }, 1000)
+                    }, 1500)
                 }
             }
             fetchAlbums();
 
         }, [artistName])
 
+        const navigate = useNavigate()
         const itemClickeado = (album) => {
             const idExtraido = album.idAlbum
-
+            navigate("../../pages/DetailSong.jsx")
             albumClick(idExtraido)
         }
 
                     
         if (isLoading){
-            return <p>Buscando Album...</p>;
+            return <img src={loadingGift} alt="cargando..."/>;
+            
         }
         if (error){
             return <p>{error}</p>;
@@ -54,19 +59,21 @@ const SearchBar = ({artistName , albumClick}) => {
         <>
             <section>
                 <h2>Albumes:</h2>
-                <section>
+                <section className="resultadosBusqueda">
                 {albums.length > 0 ? (
                 albums.map((album) => {
                     const {
-                        idAlbum, strArtist, strAlbum, strDescriptionES, strAlbumThumb} = album
+                        idAlbum, strArtist, strAlbum, strDescriptionES, strAlbumThumb, intYearReleased} = album
 
                     return(
-                        <article 
+                        <article className="itemBuscado" 
                         key={idAlbum} 
                         onClick={ () => itemClickeado(album) }>
                             <h2>Album: {strAlbum}</h2>
                             <p>Artista: {strArtist}</p>
-                            <p>Descipcion: {strDescriptionES}</p>
+
+                            <p>Año: {intYearReleased}</p>
+
                             <img alt="AlbumImage" src={strAlbumThumb} />
                         </article>
                     )

@@ -7,7 +7,7 @@ import { useState } from "react";
 import SearchBar from "./components/SearchBar/SearchBar.jsx";
 
 const App = () => {
-  const [artistName, setArtistName] = useState("paradisio")
+  const [artistName, setArtistName] = useState("Paradisio")
   const [idAlbum, setIdAlbum] = useState(null)
 
   const albumSeleccionado = (id) => {

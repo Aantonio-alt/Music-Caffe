@@ -1,0 +1,46 @@
+@import "../../base";
+
+.resultadosBusqueda {
+  display: flex;
+  gap: 1rem;
+  overflow-x: scroll;
+  padding: 1rem;
+  height: 35vh;
+  align-items: flex-start;
+
+  .itemBuscado {
+    background: $color-subtitulos;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    flex: 0 0 20rem;
+
+    h2 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      font-size: 0.85rem;
+      margin: 0.25rem 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+

@@ -1,4 +1,4 @@
-import SearchBar from "../components/SearchBar/SearchBar";
+import PeticionApiAlbum from "../components/PeticionApiAlbum/PeticionApiAlbum";
 import "./datail.css"
 
 
@@ -7,7 +7,8 @@ const DetailSong = () => {
   
   return (
     <>
-    
+            <PeticionApiAlbum idAlbum={164981} />
+
     </>
   );
 };
