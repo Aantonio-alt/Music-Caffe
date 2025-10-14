@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import "./index.css"
 import loadingGift from "../../assets/cargando.gif"
 import { Link, useNavigate } from "react-router-dom"
-
+import desconocido from "../../assets/desconocido.png"
 
 const SearchBar = ({artistName , albumClick}) => {
     const [albums, setAlbums] = useState([])
@@ -41,8 +41,8 @@ const SearchBar = ({artistName , albumClick}) => {
         const navigate = useNavigate()
         const itemClickeado = (album) => {
             const idExtraido = album.idAlbum
-            navigate("../../pages/DetailSong.jsx")
             albumClick(idExtraido)
+            navigate("/DetailSong")
         }
 
                     
@@ -74,7 +74,7 @@ const SearchBar = ({artistName , albumClick}) => {
 
                             <p>Año: {intYearReleased}</p>
 
-                            <img alt="AlbumImage" src={strAlbumThumb} />
+                            <img alt="AlbumImage" src={strAlbumThumb ? (strAlbumThumb) : (desconocido)} />
                         </article>
                     )
                 } )
@@ -82,6 +82,7 @@ const SearchBar = ({artistName , albumClick}) => {
                 <p>No se encontro nada</p>
             )
                 }
+                
                 </section>
             </section>
         </>

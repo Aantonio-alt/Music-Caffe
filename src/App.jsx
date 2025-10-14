@@ -15,13 +15,15 @@ const App = () => {
     console.log(id)
   }
 
-  return (
+  
+
+  return ( 
     <>
       <Header busqueda={setArtistName} />
       <SearchBar artistName={artistName} albumClick={albumSeleccionado}/>
         <Routes>
           <Route path="/home" element={<Home />} />
-          <Route path="/detailSong" element={<DetailSong/>} />
+          <Route path="/detailSong" element={<DetailSong idAlbum={idAlbum}/>} />
           <Route path="/" element={<Home />} /> 
         </Routes>
     </>
