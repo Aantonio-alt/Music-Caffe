@@ -31,7 +31,7 @@ const SearchBar = ({artistName , albumClick}) => {
                 } finally {
                     setTimeout(() => {
                         setIsLoading(false)
-                    }, 1500)
+                    }, 500)
                 }
             }
             fetchAlbums();
