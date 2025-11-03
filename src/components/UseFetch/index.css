@@ -1,0 +1,17 @@
+.containSearchTwo {
+  padding: 1rem;
+}
+.containSearchTwo p {
+  padding: 0.5rem;
+}
+.containSearchTwo img {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin-top: 0.5rem;
+}
+.containSearchTwo .tittleAlbum {
+  display: flex;
+  justify-self: center;
+  font-size: 1.3rem;
+}/*# sourceMappingURL=index.css.map */

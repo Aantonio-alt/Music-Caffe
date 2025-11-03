@@ -5,7 +5,7 @@
   gap: 1rem;
   overflow-x: scroll;
   padding: 1rem;
-  height: 35vh;
+  height: auto;
   align-items: flex-start;
 
   .itemBuscado {
@@ -18,7 +18,8 @@
     align-items: center;
     text-align: center;
     overflow: hidden;
-    flex: 0 0 20rem;
+    flex: 0 0 15rem;
+    max-height: 23rem;
 
     h2 {
       font-size: 1rem;
@@ -29,18 +30,23 @@
       font-size: 0.85rem;
       margin: 0.25rem 0;
       text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
       width: 100%;
     }
 
-    img {
+    .imagenSearch {
       width: 100%;
       height: auto;
       border-radius: 5px;
       margin-top: 0.5rem;
+      object-fit: cover;
     }
   }
+}
+.tittleAlbum{
+  padding: 1rem;
+  font-size: 2rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: $color-subtitulos;
 }
 
 

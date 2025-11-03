@@ -33,9 +33,28 @@ p {
   font-style: normal;
 }
 
-img {
-  width: 30%;
-  border-color: black;
-  border-radius: 1rem;
-  border: solid 0.1rem;
+.loadingGift {
+  width: 10%;
+  border: transparent;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  padding: 1rem;
+}
+
+.imagenSearch2 {
+  width: 40%;
+}
+
+.containSearchTwo {
+  padding: 1rem;
+}
+.containSearchTwo p {
+  padding: 0.5rem;
+}
+.containSearchTwo img {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin-top: 0.5rem;
 }/*# sourceMappingURL=datail.css.map */

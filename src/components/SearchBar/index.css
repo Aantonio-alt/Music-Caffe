@@ -38,7 +38,7 @@ p {
   gap: 1rem;
   overflow-x: scroll;
   padding: 1rem;
-  height: 35vh;
+  height: auto;
   align-items: flex-start;
 }
 .resultadosBusqueda .itemBuscado {
@@ -51,7 +51,8 @@ p {
   align-items: center;
   text-align: center;
   overflow: hidden;
-  flex: 0 0 20rem;
+  flex: 0 0 15rem;
+  max-height: 23rem;
 }
 .resultadosBusqueda .itemBuscado h2 {
   font-size: 1rem;
@@ -61,13 +62,20 @@ p {
   font-size: 0.85rem;
   margin: 0.25rem 0;
   text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
   width: 100%;
 }
-.resultadosBusqueda .itemBuscado img {
+.resultadosBusqueda .itemBuscado .imagenSearch {
   width: 100%;
   height: auto;
   border-radius: 5px;
   margin-top: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.tittleAlbum {
+  padding: 1rem;
+  font-size: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #7B4B3A;
 }/*# sourceMappingURL=index.css.map */

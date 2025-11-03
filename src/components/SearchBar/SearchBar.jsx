@@ -47,7 +47,7 @@ const SearchBar = ({artistName , albumClick}) => {
 
                     
         if (isLoading){
-            return <img src={loadingGift} alt="cargando..."/>;
+            return <img className="loadingGift" src={loadingGift} alt="cargando..."/>;
             
         }
         if (error){
@@ -58,7 +58,7 @@ const SearchBar = ({artistName , albumClick}) => {
     return (
         <>
             <section>
-                <h2>Albumes:</h2>
+                <h2 className="tittleAlbum">Albumes:</h2>
                 <section className="resultadosBusqueda">
                 {albums.length > 0 ? (
                 albums.map((album) => {
@@ -69,12 +69,12 @@ const SearchBar = ({artistName , albumClick}) => {
                         <article className="itemBuscado" 
                         key={idAlbum} 
                         onClick={ () => itemClickeado(album) }>
-                            <h2>Album: {strAlbum}</h2>
+                            <h2 >Album: {strAlbum}</h2>
                             <p>Artista: {strArtist}</p>
 
                             <p>Año: {intYearReleased}</p>
 
-                            <img alt="AlbumImage" src={strAlbumThumb ? (strAlbumThumb) : (desconocido)} />
+                            <img alt="AlbumImage" className="imagenSearch" src={strAlbumThumb ? (strAlbumThumb) : (desconocido)} />
                         </article>
                     )
                 } )

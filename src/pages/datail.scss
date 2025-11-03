@@ -2,10 +2,29 @@
 
 
 
-img{
-    width: 30%;
-    border-color: black;
-    border-radius: 1rem;
-    border: solid .1rem;
+.loadingGift{
+    width: 10%;
+    border: transparent ;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    padding: 1rem;
     
+}
+.imagenSearch2{
+    width: 40%;
+}
+.containSearchTwo{
+    padding: 1rem;
+
+    p{
+        padding: .5rem;
+    }
+
+    img{
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        margin-top: .5rem;
+    }
 }

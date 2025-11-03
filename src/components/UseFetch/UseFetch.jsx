@@ -2,6 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import desconocido from "../../assets/desconocido.png"
 import loadingGift from "../../assets/cargando.gif"
+import "./index.css"
 
 const UseFetch = ({idAlbum}) => {
     const [detallesAlbum, setDetallesAlbum] = useState([])
@@ -37,7 +38,7 @@ const UseFetch = ({idAlbum}) => {
     }, [idAlbum])
 
         if (isLoading){
-            return <img src={loadingGift} alt="cargando..."/>;
+            return <img src={loadingGift} className="loadingGift" alt="cargando..."/>;
             
         }
         if (error){
@@ -51,7 +52,7 @@ const UseFetch = ({idAlbum}) => {
                 const {strAlbum, strArtist, intYearReleased, strAlbumThumb, strDescriptionEN, strGenre, idAlbum} = detail;
 
                 return (
-                    <section key={idAlbum}>
+                    <section className="containSearchTwo" key={idAlbum}>
                         <h2>{strAlbum}</h2>
 
                         <p>Artista: {strArtist ? (strArtist) : ("Desconocido")}</p>
@@ -62,7 +63,7 @@ const UseFetch = ({idAlbum}) => {
 
                         <p>Descripción: {strDescriptionEN ? (strDescriptionEN) : ("Desconocido")}</p>
                         
-                        <img src={strAlbumThumb ? (strAlbumThumb) : (desconocido)} alt="Album Imagen" />
+                        <img className="imagenSearch2" src={strAlbumThumb ? (strAlbumThumb) : (desconocido)} alt="Album Imagen" />
 
                     </section>
                 )
