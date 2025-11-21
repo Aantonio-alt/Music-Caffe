@@ -53,7 +53,7 @@ const UseFetch = ({idAlbum}) => {
 
                 return (
                     <section className="containSearchTwo" key={idAlbum}>
-                        <h2>{strAlbum}</h2>
+                        <h2 className="tittleAlbum">{strAlbum}</h2>
 
                         <p>Artista: {strArtist ? (strArtist) : ("Desconocido")}</p>
 
